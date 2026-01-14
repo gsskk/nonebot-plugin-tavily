@@ -1,7 +1,7 @@
 """NoneBot plugin for Tavily Search API."""
 
 from nonebot import require, logger
-from nonebot.plugin import PluginMetadata
+from nonebot.plugin import PluginMetadata, inherit_supported_adapters
 
 # 确保依赖的插件已加载 - 必须在导入 commands 模块之前！
 require("nonebot_plugin_alconna")
@@ -20,9 +20,9 @@ __plugin_meta__ = PluginMetadata(
         "/crawl <url> [--instructions <text>] [--max_breadth <int>] - 智能抓取"
     ),
     type="application",
-    homepage="https://github.com/nonebot-plugin-tavily",
+    homepage="https://github.com/gsskk/nonebot-plugin-tavily",
     config=Config,
-    supported_adapters=None,
+    supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna"),
 )
 
 logger.info(f"[Tavily] Plugin loaded: v{__version__}")
