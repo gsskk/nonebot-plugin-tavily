@@ -3,11 +3,11 @@
 from nonebot import require, logger
 from nonebot.plugin import PluginMetadata
 
+# 确保依赖的插件已加载 - 必须在导入 commands 模块之前！
+require("nonebot_plugin_alconna")
+
 from .commands import crawl, extract, search
 from .config import Config
-
-# 确保依赖的插件已加载
-require("nonebot_plugin_alconna")
 
 __version__ = "0.1.0"
 

@@ -19,3 +19,7 @@ plugins = ["nonebot_plugin_tavily"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 120
+ignore = ["E402"]
