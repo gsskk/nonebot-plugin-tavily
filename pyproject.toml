@@ -1,0 +1,21 @@
+[project]
+name = "nonebot-plugin-tavily"
+version = "0.1.0"
+description = "Tavily Search API plugin for NoneBot2"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "nonebot2>=2.3.0",
+    "nonebot-plugin-alconna>=0.50.2",
+    "tavily-python>=0.5.4",
+]
+
+[project.license]
+text = "MIT"
+
+[tool.nonebot]
+plugins = ["nonebot_plugin_tavily"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
